@@ -26,13 +26,13 @@ class Paddle(GameSprite):
         keys = key.get_pressed()
         if keys[K_UP] and self.rect.y > 5:
             self.rect.y -= self.speed
-        if keys[K_DOWN] and self.rect.y < win_height - 80:
+        if keys[K_DOWN] and self.rect.y < win_height - 140:
             self.rect.y += self.speed
     def update_left(self):
         keys = key.get_pressed()
         if keys[K_w] and self.rect.y > 5:
             self.rect.y -= self.speed
-        if keys[K_s] and self.rect.y < win_height - 80:
+        if keys[K_s] and self.rect.y < win_height - 140:
             self.rect.y += self.speed
 
 BLUE = (173, 216, 230)
@@ -47,9 +47,9 @@ paddle_1 = "paddle_1.png"
 paddle_2 = "paddle_2.png"
 ball = "sphere.png"
 
-paddleLeft = Paddle (paddle_1, 20, 200, 30, 150, 50)
-paddleRight = Paddle (paddle_2, 520, 200, 30, 150, 50)
-ball = GameSprite(ball, 330, 200, 50, 50, 50)
+paddleLeft = Paddle (paddle_1, 20, 200, 30, 150, 10)
+paddleRight = Paddle (paddle_2, 520, 200, 30, 150, 10)
+ball = GameSprite(ball, 330, 200, 50, 50, 110)
 
 game = True
 finish = False
